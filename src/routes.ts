@@ -10,7 +10,10 @@ const documentController = new DocumentsController();
 const analysisController = new AnalysisController();
 
 router.post("/users", userController.create);
+
 router.post("/documents", documentController.create);
+
 router.post("/analysis", analysisController.execute);
+router.get("/allAnalysis", analysisController.all);
 
 export { router };

@@ -18,15 +18,31 @@ class AnalysisController {
       relations: ["documents", "user"],
     });
 
-    const { id, analyzedAt, documents, user } = analysisAlreadyExists;
-
     if (analysisAlreadyExists) {
-      return response.status(200).json({ id, analyzedAt, documents, user });
+      return response.status(200).json(analysisAlreadyExists);
     }
 
     await analysisRepository.save(analysis);
 
-    return response.status(201).json({ id, analyzedAt, documents, user });
+    return response.status(201).json(analysis);
+  }
+
+  async all(request: Request, response: Response) {
+    const analysisRepository = getCustomRepository(AnalysisRepository);
+
+    const allAnalysis = await analysisRepository.find({
+      relations: ["documents", "user"],
+    });
+
+    if (allAnalysis) {
+      allAnalysis.map((elem) => {
+        delete elem.documents_id, delete elem.user_id;
+      });
+
+      return response.status(200).json(allAnalysis);
+    }
+
+    return response.status(400).json({ error: "There is no analysis yet!" });
   }
 }
 
