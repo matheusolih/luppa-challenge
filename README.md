@@ -9,49 +9,55 @@ Antes de começar, você precisará ter instalado na sua máquina as seguintes f
 [Git] [Node.js] [VsCODE]
 <br><br/>
 
-## Clone este repositório na sua máquina
+Clone este repositório na sua máquina
 
-$ git clone git@github.com:matheusolih/luppa-challenge.git
+### `git clone git@github.com:matheusolih/luppa-challenge.git`
+
 <br><br/>
 
-## Acesse a pasta do projeto no terminal
+Acesse a pasta do projeto no terminal
 
-$ cd/luppa-challenge
+### `cd/luppa-challenge`
+
 <br><br/>
 
 ## Utilizando NPM
 
-### Instale as dependências utilizando o npm
+Instale as dependências utilizando o npm
 
-$ npm install
+### `npm install`
+
 <br><br/>
 
-### Execute o projeto em modo de desenvolvimento
+Execute o projeto em modo de desenvolvimento
 
-$ npm run dev
+### `npm run dev`
+
 <br><br/>
 
-### Para rodar os testes
+Para rodar os testes
 
-$ npm test
+### `npm test`
+
+<br></br>
 
 ## Utilizando yarn
 
-### Instale as dependências utilizando yarn
+Instale as dependências utilizando yarn
 
-$ yarn install
+### `yarn install`
+
 <br><br/>
 
-### Execute o projeto em modo de desenvolvimento:
+Execute o projeto em modo de desenvolvimento:
 
-$ yarn dev
+### `yarn dev`
+
 <br><br/>
 
-### Para rodar os testes
+Para rodar os testes
 
-$ yarn test
-
-### Acesse no browser na porta 3000 (padrão)
+### `yarn test`
 
 <br><br/>
 
