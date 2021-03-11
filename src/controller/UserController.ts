@@ -14,9 +14,19 @@ class UserController {
       documents,
     });
 
+    const userAlreadyExists = await usersRepository.findOne({
+      cpf,
+    });
+
+    if (userAlreadyExists) {
+      return response
+        .status(401)
+        .json({ error: "User already exists with this CPF!" });
+    }
+
     await usersRepository.save(user);
 
-    return response.send();
+    return response.status(201).json(user);
   }
 }
 

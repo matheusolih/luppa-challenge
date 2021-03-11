@@ -3,7 +3,7 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
-  ManyToOne,
+  OneToOne,
   PrimaryColumn,
 } from "typeorm";
 
@@ -19,7 +19,7 @@ class Analysis {
   @Column()
   user_id: string;
 
-  @ManyToOne(() => User)
+  @OneToOne(() => User)
   @JoinColumn({ name: "user_id" })
   user: User;
 
@@ -29,7 +29,7 @@ class Analysis {
   @Column()
   documents_id: string;
 
-  @ManyToOne(() => Documents)
+  @OneToOne(() => Documents)
   @JoinColumn({ name: "documents_id" })
   documents: Documents;
 
