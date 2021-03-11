@@ -36,4 +36,13 @@ describe("Create user", () => {
 
     expect(response.status).toBe(401);
   });
+
+  it("Should not be able to create a new user without fullname, cpf or documents!", async () => {
+    const response = await request(app).post("/users").send({
+      fullName: "fullname teste",
+      documents: "teste documents",
+    });
+
+    expect(response.status).toBe(401);
+  });
 });

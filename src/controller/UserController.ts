@@ -6,6 +6,12 @@ class UserController {
   async create(request: Request, response: Response) {
     const { fullName, cpf, documents } = request.body;
 
+    if (!fullName || !cpf || !documents) {
+      return response
+        .status(401)
+        .json({ error: "Please type a fullname, cpf and documents." });
+    }
+
     const usersRepository = getCustomRepository(UsersRepository);
 
     const user = usersRepository.create({
