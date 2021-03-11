@@ -68,3 +68,5 @@ Para rodar os testes
 - [Node.js](https://nodejs.org/en/)
 - [Typescript](https://www.typescriptlang.org/)
 - [TyoeORM](https://typeorm.io/#/)
+
+### As rotas no arquivo TestRoutes.json estão com os testes para cadastrar o usuário, documentos e gerar uma análise para os respectivos usuários (Rotas de testes foram realizadas no aplicativo Insomnia).
